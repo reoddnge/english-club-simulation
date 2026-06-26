@@ -1051,7 +1051,7 @@ return (
 
 
 
-<div style={{display:"flex",gap:10}}>
+<div className="studentActions">
 
 
 <button
@@ -2427,8 +2427,9 @@ padding:20
 hud:{
 display:"flex",
 justifyContent:"space-between",
-alignItems:"flex-start",
-marginBottom:10
+alignItems:"center",
+marginBottom:10,
+width:"100%"
 },
 
 
@@ -2584,11 +2585,12 @@ cursor:"pointer"
 
 inboxModal:{
 position:"relative",
-width:700,
-height:400,
+width:"90%",
+maxWidth:700,
+height:"80vh",
 background:"#111827",
-display:"grid",
-gridTemplateColumns:"1fr 1fr",
+display:"flex",
+flexDirection:"column",
 borderRadius:16,
 overflow:"hidden",
 paddingTop:30
@@ -2597,27 +2599,26 @@ paddingTop:30
 
 inbox:{
 padding:20,
-overflowY:"auto"
+overflowY:"auto",
+flex:1
 },
 
 
 compose:{
-padding:"20px",
+padding:20,
 display:"flex",
 flexDirection:"column",
 gap:12,
-marginTop: 20
+borderTop:"1px solid #334155"
 },
 
-
 message:{
-padding:14,
-background:"#1e293b",
-marginBottom:12,
+padding:12,
+marginBottom:10,
 borderRadius:12,
 cursor:"pointer",
-transition:"0.2s",
-border:"1px solid #334155"
+border:"1px solid #334155",
+wordBreak:"break-word"
 },
 
 
@@ -3103,10 +3104,29 @@ transform:scale(1);
 .studentHud{
 
 flex-direction:column;
-
+align-items:stretch;
 gap:15px;
 
 }
+
+
+.studentActions{
+
+display:flex;
+width:100%;
+gap:10px;
+justify-content:center;
+
+}
+
+
+.studentActions button{
+
+flex:1;
+justify-content:center;
+
+}
+
 
 }
 
