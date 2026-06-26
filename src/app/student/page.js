@@ -1069,7 +1069,6 @@ onClick={()=>setShowTools(true)}
 
 
 <button
-
 style={styles.blueButton}
 
 onClick={()=>setShowInbox(true)}
@@ -2585,31 +2584,33 @@ cursor:"pointer"
 
 inboxModal:{
 position:"relative",
-width:"90%",
+width:"95%",
 maxWidth:700,
-height:"80vh",
+height:"85vh",
 background:"#111827",
 display:"flex",
 flexDirection:"column",
-borderRadius:16,
+borderRadius:20,
 overflow:"hidden",
-paddingTop:30
+paddingTop:40
 },
 
 
 inbox:{
-padding:20,
+padding:15,
 overflowY:"auto",
-flex:1
+flex:1,
+minHeight:0
 },
 
 
 compose:{
-padding:20,
+padding:15,
 display:"flex",
 flexDirection:"column",
-gap:12,
-borderTop:"1px solid #334155"
+gap:10,
+borderTop:"1px solid #334155",
+background:"#0f172a"
 },
 
 message:{
@@ -2644,8 +2645,9 @@ minWidth:250
 
 closeBtn:{
   position:"absolute",
-  top:10,
-  right:10,
+  top:12,
+  right:12,
+  zIndex:10,
   background:"#dc2626",
   color:"white",
   border:"none",
@@ -3099,13 +3101,14 @@ transform:scale(1);
 
 }
 
-@media(max-width:700px){
+
+/* DESKTOP */
 
 .studentHud{
 
-flex-direction:column;
-align-items:stretch;
-gap:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 
 }
 
@@ -3113,9 +3116,49 @@ gap:15px;
 .studentActions{
 
 display:flex;
-width:100%;
+flex-direction:row;
 gap:10px;
+align-items:center;
+justify-content:flex-end;
+
+}
+
+
+.inboxBtn{
+
+position:relative;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+.studentHud{
+
+flex-direction:column;
+align-items:center;
+gap:15px;
+width:100%;
+
+}
+
+
+.studentActions{
+
+display:flex;
+
+flex-direction:row;
+
+width:100%;
+
+gap:10px;
+
 justify-content:center;
+
+align-items:center;
 
 }
 
@@ -3123,6 +3166,9 @@ justify-content:center;
 .studentActions button{
 
 flex:1;
+
+max-width:180px;
+
 justify-content:center;
 
 }
