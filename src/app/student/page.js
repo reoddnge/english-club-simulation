@@ -91,12 +91,47 @@ eventSound.current.volume = 0.7;
 
 useEffect(()=>{
 
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+
+const urlStudent =
+params.get("student");
+
+
+const urlGame =
+params.get("game");
+
+
 const student =
+urlStudent ||
 localStorage.getItem("studentId");
 
 
 const game =
+urlGame ||
 localStorage.getItem("activeGameId");
+
+
+if(student)
+localStorage.setItem(
+"studentId",
+student
+);
+
+
+if(game)
+localStorage.setItem(
+"activeGameId",
+game
+);
+
+
+setActiveStudentId(student);
+
+setGameId(game);
 
 
 setActiveStudentId(student);
