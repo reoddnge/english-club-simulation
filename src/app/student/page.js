@@ -3139,12 +3139,16 @@ position:relative;
 .studentHud{
 
 flex-direction:column;
-align-items:center;
+align-items:stretch;
 gap:15px;
-width:100%;
 
 }
 
+.studentHud > div:first-child{
+
+text-align:center;
+
+}
 
 .studentActions{
 
